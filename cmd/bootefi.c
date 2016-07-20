@@ -212,7 +212,7 @@ static unsigned long do_bootefi_exec(void *efi, void *fdt)
 		dcache_disable();	/* flush cache before switch to EL2 */
 		armv8_switch_to_el2();
 		/* Enable caches again */
-		set_sctlr(get_sctlr() | (CR_C|CR_M));
+		dcache_enable();
 	}
 #endif
 
