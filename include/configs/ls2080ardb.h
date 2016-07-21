@@ -325,6 +325,7 @@ unsigned long get_board_sys_clk(void);
 #include <config_distro_defaults.h>
 
 #define BOOT_TARGET_DEVICES(func) \
+	func(USB, usb, 0) \
 	func(MMC, mmc, 0) \
 	func(SCSI, scsi, 0) \
 	func(DHCP, dhcp, na)

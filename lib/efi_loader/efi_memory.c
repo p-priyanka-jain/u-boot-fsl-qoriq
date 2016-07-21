@@ -400,8 +400,8 @@ int efi_memory_init(void)
 
 #ifdef CONFIG_SYS_MEM_RESERVE_SECURE
 	/* Declare secure ram as reserved */
-        if (gd->secure_ram & MEM_RESERVE_SECURE_SECURED) {
-		uint64_t secure_start = gd->secure_ram;
+        if (gd->arch.secure_ram & MEM_RESERVE_SECURE_SECURED) {
+		uint64_t secure_start = gd->arch.secure_ram;
 		uint64_t secure_pages = CONFIG_SYS_MEM_RESERVE_SECURE;
 
 		secure_start &= MEM_RESERVE_SECURE_ADDR_MASK;
